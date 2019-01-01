@@ -31,38 +31,75 @@ The Oli is powered with a dedicated 5V power supply
 
 ### Ground
 
-The Grounds of the two boards need to be connected. See Cabling.
+The Grounds of the two boards need to be connected. See SPI.
 
 ### SPI
 
-To be defined
+We have to connect the following pins for JTAG. Ground is connected via this JTAG.
+
+Raspi Connector: J8\
+Oli Connector: PGM1
+
+| Raspi pin name/num  | Oli pin name/num |
+| ------------------- | -----------------|
+| SCK / 23            | SCK / 9          |
+| MISO / 21           | SDI / 7          |
+| MOSI / 19           | SDO / 8          |
+| CE0 / 24            | SS_B / 10        |
+| GPIO25 / 22         | CDONE / 5        |
+| GND / 20            | GND / 2          |
+| GPIO24 / 18         | CRESET / 6       |
 
 ### JTAG
 
-We have to connect the following pins. Reset is not unused.
+We have to connect the following pins for JTAG. Reset is not unused.
 
-| Raspi Name/Num  | Oli Name/Num    |
-| Connector J8    | Connector GPIO1 |
-| --------------- | ----------------|
-| TCK / 35        | TCK / 31        |
-| TMS / 36        | TMS / 32        |
-| TDI / 37        | TDI / 33        |
-| TDO / 38        | TDI / 34        |
-| RST / 40        | optional        |
+Raspi Connector: J8\
+Oli Connector: GPIO1
 
+| Raspi pin name/num  | Oli pin name/num    |
+| ------------------- | ------------------- |
+| TCK / 35            | TCK / 31            |
+| TMS / 36            | TMS / 32            |
+| TDI / 37            | TDI / 33            |
+| TDO / 38            | TDI / 34            |
+| RST / 40            | optional            |
+
+### UART
+
+UART can be used to talk to the FPGA.
+
+Raspi Connector: J8\
+Oli Connector: GPIO1
+
+| Raspi pin name/num  | Oli pin name/num    |
+| ------------------- | ------------------- |
+| Tx / 8              | Rx / e.g. 28        |
+| Rx / 10             | Tx / e.g. 27        |
 
 
 ## Installation
 
-Run the script:
+For installing the tools run the script:
 ```sh install.sh```
 
 ## Programming
 
-Run the script:
-```program.sh *programming_file.bin*```
+To prgram the FPGA run the script:
+```program.sh programming_file.bin```
+
+The programming file can be generated with the [yosys suite](http://www.clifford.at/yosys/), see also [SpinalDev](https://github.com/plex1/SpinalDev)).
 
 ## JTAG Server
 
 To start the openocd server run:
 ```openocd.sh```
+
+JTAG can be used to program and debug software (see for example [SpinalDev](https://github.com/plex1/SpinalDev))
+
+## UART
+
+Make sure uart is enabled in the configuration (```sudo raspi-config```) and mincom is installed (```sudo apt-get install minicom```). Now access of uart may be done with:
+```
+minicom -b 115200 -o -D /dev/ttyAMA0
+```
