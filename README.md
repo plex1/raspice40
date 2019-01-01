@@ -2,7 +2,7 @@
 
 This document describes how to configure a Raspberry Pi 3 to program the [lattice ice40HX8K fpga board from olimex](https://www.olimex.com/Products/FPGA/iCE40/iCE40HX1K-EVB/open-source-hardware).
 
-See also:
+Sources:
 
 [1] [olimex webiste, iceprog](https://www.olimex.com/wiki/ICE40HX1K-EVB#Iceprog_with_Raspberry_PI)
 
