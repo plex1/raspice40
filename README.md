@@ -62,7 +62,7 @@ Oli Connector: GPIO1
 | TCK / 35            | TCK / 31            |
 | TMS / 36            | TMS / 32            |
 | TDI / 37            | TDI / 33            |
-| TDO / 38            | TDI / 34            |
+| TDO / 38            | TDO / 34            |
 | RST / 40            | optional            |
 
 ### UART
