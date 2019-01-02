@@ -35,7 +35,7 @@ The Grounds of the two boards need to be connected. See SPI.
 
 ### SPI
 
-We have to connect the following pins for JTAG. Ground is connected via this JTAG.
+We have to connect the following pins for SPI. Grounds are connected via this SPI connector.
 
 Raspi Connector: J8\
 Oli Connector: PGM1
