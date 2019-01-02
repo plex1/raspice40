@@ -20,7 +20,7 @@ sudo apt-get install git autoconf libtool make pkg-config libusb-1.0-0 libusb-1.
 sudo apt-get install libtool automake libusb-1.0.0-dev texinfo libusb-dev libyaml-dev pkg-config
 git clone https://github.com/SpinalHDL/openocd_riscv.git
 cd openocd_riscv/
-git apply ../open_ocd.patch
+#git apply ../open_ocd.patch
 git submodule init
 git submodule update
 ./bootstrap || true
