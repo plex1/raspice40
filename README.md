@@ -1,6 +1,6 @@
 # Raspberry Pi 3 for controlling olimex ice40HX8K (programming, JTAG, UART)
 
-This document describes how to configure a Raspberry Pi 3 (Raspi) to program the [lattice ice40HX8K fpga board from olimex](https://www.olimex.com/Products/FPGA/iCE40/iCE40HX1K-EVB/open-source-hardware) (Oli).
+This document describes how to configure a Raspberry Pi 3 (Raspi) to program the [lattice ice40HX8K fpga board from olimex](https://www.olimex.com/Products/FPGA/iCE40/iCE40HX8K-EVB/open-source-hardware) (Oli).
 
 Sources:
 
